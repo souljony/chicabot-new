@@ -33,8 +33,8 @@ const statuscmd = () => async (ctx: Context) => {
 
   try {
       // Update the bot's bio
-      const bioDescription = status === 'open' ? 'Ordering system is open' : 'Ordering system is closed';
-      await ctx.telegram.setMyDescription(bioDescription);
+      const bioDescription = status === 'open' ? 'CHICA BOT: Open' : 'CHICA BOT: Closed';
+      await ctx.telegram.setMyName(bioDescription);
 
       ctx.reply(`Order system status changed to ${status}.`);
     } catch (error) {
